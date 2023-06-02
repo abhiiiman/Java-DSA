@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class SumNum {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the number here to count digits:");
+        System.out.println("Enter the number here to sum digits:");
         int n = input.nextInt();
         input.close();
         int sum = 0;
