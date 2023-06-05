@@ -9,14 +9,14 @@ public class ResizeArray {
         System.out.println();
     }
 
-    public void resize(int[] arr, int capacity) {
+    public int[] resize(int[] arr, int capacity) {
         int newArray[] = new int[capacity];
         // copying the elements here.
         for (int i = 0; i < arr.length; i++) {
             newArray[i] = arr[i];
         }
         arr = newArray;
-        printArray(arr);
+        return arr;
     }
 
     public static void main(String[] args) {
@@ -26,7 +26,8 @@ public class ResizeArray {
         System.out.println("original array:");
         array_demo.printArray(myArray);
         System.out.println("After resizing the array:");
-        array_demo.resize(myArray, 3*(myArray.length));
+        int resultArray[] = array_demo.resize(myArray, 3*(myArray.length));
+        array_demo.printArray(resultArray);
     }
 
 }
