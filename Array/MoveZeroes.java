@@ -14,17 +14,30 @@ public class MoveZeroes {
         int newArray[] = new int[arr.length];
         int index = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != 0){
+            if (arr[i] != 0) {
                 newArray[index] = arr[i];
                 index++;
             }
         }
-
+        System.out.println("New Array:");
         printArray(newArray);
     }
 
-    public void moveZeroSwap(int[] arr){
-        
+    public void moveZeroSwap(int[] arr) {
+        int j = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0 && arr[j] == 0) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+
+            if (arr[j] != 0) {
+                j++;
+            }
+        }
+        System.out.println("Modified Array:");
+        printArray(arr);
     }
 
     public static void main(String[] args) {
@@ -37,6 +50,6 @@ public class MoveZeroes {
         array_demo.moveZero(myArray);
 
         // method-2
-
+        array_demo.moveZeroSwap(myArray);
     }
 }
