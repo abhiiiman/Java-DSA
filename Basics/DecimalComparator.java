@@ -2,15 +2,13 @@ package Basics;
 
 import java.util.Scanner;
 
-public class DecimalComparator {
-    public boolean areEqualByThreeDecimalPlaces(double num1, double num2){
-        int roundedNum1 = (int) Math.round(num1);
-        int roundedNum2 = (int) Math.round(num2);
-        if (roundedNum1 == roundedNum2){
-            return true;
-        }
-        return false;
+    public class DecimalComparator{
+        public boolean areEqualByThreeDecimalPlaces(double num1, double num2) {
+        int roundedNum1 = (int) num1*1000;
+        int roundedNum2 = (int) num2*1000;
+        return (roundedNum1 == roundedNum2);
     }
+
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -24,4 +22,5 @@ public class DecimalComparator {
         boolean result = checkDecimal.areEqualByThreeDecimalPlaces(number1, number2);
         System.out.println(result);
     }
+
 }
