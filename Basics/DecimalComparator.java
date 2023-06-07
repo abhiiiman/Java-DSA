@@ -2,10 +2,11 @@ package Basics;
 
 import java.util.Scanner;
 
-    public class DecimalComparator{
-        public boolean areEqualByThreeDecimalPlaces(double num1, double num2) {
-        int roundedNum1 = (int) num1*1000;
-        int roundedNum2 = (int) num2*1000;
+public class DecimalComparator {
+
+    public boolean areEqualByThreeDecimalPlaces(double num1, double num2) {
+        int roundedNum1 = (int) (num1) * 1000;
+        int roundedNum2 = (int) (num2) * 1000;
         return (roundedNum1 == roundedNum2);
     }
 
