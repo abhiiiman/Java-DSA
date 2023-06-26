@@ -2,8 +2,6 @@ package SinglyLinkedList;
 
 public class SinglyLinkedList {
 
-    private ListNode head;
-
     private static class ListNode {
         private int data; // generic type.
         private ListNode next;
@@ -14,9 +12,11 @@ public class SinglyLinkedList {
         }
     }
 
-    public void display(){
+    private ListNode head;
+
+    public void display() {
         ListNode current = head;
-        while (current != null){
+        while (current != null) {
             System.out.print(current.data + " -->");
             current = current.next;
         }
