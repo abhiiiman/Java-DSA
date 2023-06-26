@@ -18,7 +18,7 @@ public class InsertAtPos {
 
     public static void display() {
         ListNode current = head;
-        while (current.next != null) {
+        while (current != null) {
             System.out.print(current.data + " --> ");
             current = current.next;
         }
@@ -31,7 +31,7 @@ public class InsertAtPos {
         }
         int count = 0;
         ListNode current = head;
-        while (current.next != null) {
+        while (current != null) {
             count++;
             current = current.next;
         }

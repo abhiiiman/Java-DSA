@@ -16,7 +16,7 @@ public class InsertAtEnd {
 
     public static void display() {
         ListNode current = head;
-        while (current.next != null) {
+        while (current != null) {
             System.out.print(current.data + " --> ");
             current = current.next;
         }
@@ -29,12 +29,24 @@ public class InsertAtEnd {
         }
         int count = 0;
         ListNode current = head;
-        while (current.next != null) {
+        while (current != null) {
             count++;
             current = current.next;
         }
         return count;
 
+    }
+
+    public static void InsertAtlast(int nodeData){
+        ListNode newNode = new ListNode(nodeData);
+        if (head== null){
+            head = newNode;
+        }
+        ListNode current = head;
+        while (current.next != null){
+            current = current.next;
+        }
+        current.next = newNode;
     }
 
     public static void main(String[] args) {
@@ -64,17 +76,8 @@ public class InsertAtEnd {
 
         // InsertAtlast
 
-        ListNode newNode = new ListNode(100);
-        if (head== null){
-            head = newNode;
-        }
-        ListNode current = head;
-        while (current.next != null){
-            current = current.next;
-        }
-        current.next = newNode;
-
         System.out.println("After insertion at last:");
+        InsertAtlast(1000);
         display();
         int l2 = findLength();
         System.out.println("Length: " + l2);
